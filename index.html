@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>landing-page</title>
+    <style>
+      #video {
+        width: var(--text-box-width);
+        border: none;
+        aspect-ratio: 16 / 9;
+      }
+      @media (min-width: 720px) and (min-height: 720px) {
+        #menu > #home-btn {
+          pointer-events: none;
+          text-decoration: underline;
+        }
+      }
+    </style>
+    <script src="./templates/baseline.js"></script>
+  </head>
+  <body>
+    <general-style></general-style>
+    <logo-loader></logo-loader>
+    <navigation-loader></navigation-loader>
+    <div class="horizontal-center">
+      <div class="contains-text">
+        <h1>
+          Dream Interpretation
+        </h1>
+        <p>
+          What really constitutes as a dream symbols? Dream Symbols are
+          archetypal patterns that encompass contents of religions, mythologies,
+          numbers, shapes, legends and fairytales. These patterns or motifs
+          which come from the collective unconscious expresses itself in
+          metaphors or sacred geometric shapes. In our dreams these specific
+          images, characters, and themes symbolically expresses itself
+          regardless of what religion, culture, age or geographic region you
+          reside in. These dream symbols share the same story of the human
+          experience that contain the same meaning.
+        </p>
+      </div>
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/zlYQKh8_qlQ"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </body>
+</html>

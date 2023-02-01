@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>background-template</title>
+    <style>
+        html {
+          background-image: url("./media/background.jpg");
+          background-size: cover;
+          background-attachment: fixed;
+          --text-background: rgba(255, 255, 255, 0.3);
+          --text-box-width: 80%;
+        }
+        .horizontal-center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .contains-text {
+          background-color: var(--text-background);
+          width: var(--text-box-width);
+          padding: 1em 1em;
+          margin: 1em 1em;
+        }
+        .contains-text > h1 {
+          text-align: center;
+        }
+        @media (min-width: 720px) and (min-height: 720px) {
+          html {
+            --text-box-width: 70%;
+          }
+        }
+        @media (min-width: 900px) and (min-height: 900px) {
+          html {
+            --text-box-width: 50%;
+          }
+        }
+      </style>
+</html>

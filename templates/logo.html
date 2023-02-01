@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>logo-template</title>
+    <style>
+      #logo {
+        width: 5em;
+        height: 5em;
+      }
+      @media (min-width: 720px) and (min-height: 720px) {
+        #logo-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        #logo {
+          width: 10em;
+          height: 10em;
+        }
+      }
+      @media (min-width: 900px) and (min-height: 900px) {
+        #logo {
+          width: 18em;
+          height: 18em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo-container">
+      <a href="./index.html">
+        <img src="./media/logo.png" alt="logo" id="logo" />
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>navigation-template</title>
+    <style>
+      html {
+        --menu-bar-color: rgba(240, 240, 240, 1);
+        --selection-grey: rgba(150, 150, 150, 0.6);
+        --footer-height: 3.5vh;
+        --menu-margin: 0.4em;
+        margin-bottom: var(--footer-height);
+      }
+      .horizontal-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      #menu-btn {
+        position: fixed;
+        top: var(--menu-margin);
+        right: var(--menu-margin);
+        z-index: 2;
+        transition: 0.3s;
+        font-size: 3em;
+        color: white;
+      }
+      #menu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        overflow-x: hidden;
+        background-color: var(--menu-bar-color);
+        transition: 0.5s;
+        padding-top: 0;
+      }
+      #menu > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 3em;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        background-color: white;
+        border-top: 1px solid var(--menu-bar-color);
+        padding-left: 1.5em;
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+      #menu > a:hover {
+        background-color: var(--selection-grey);
+      }
+      #menu > #home-btn {
+        position: relative;
+        margin: var(--menu-margin);
+        padding-left: 0;
+        text-align: left;
+        font-size: 3em;
+        background-color: transparent;
+        width: 1em;
+        height: 1em;
+      }
+      #footer > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 3em;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        background-color: var(--menu-bar-color);
+        border-top: 1px solid white;
+        padding-left: 1.5em;
+      }
+      #footer > a:hover {
+        background-color: var(--selection-grey);
+      }
+      #footer > #newsletter-desktop {
+        display: none;
+      }
+      @media (min-width: 720px) and (min-height: 720px) {
+        #menu-btn {
+          display: none;
+        }
+        #menu {
+          position: static;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          width: 50%;
+          height: 2.5vw;
+          border-radius: 25px;
+          margin: 2em;
+          background-color: var(--text-background);
+          padding-top: 0;
+          font-size: 1.2vw;
+        }
+        #menu > a {
+          color: black;
+          transition: 0.3s;
+          border: none;
+          height: 0;
+          padding: 0 0;
+        }
+        #menu > a:hover {
+          background-color: transparent;
+          color: white;
+        }
+        #menu > #home-btn {
+          position: static;
+          font-size: inherit;
+          margin: 0;
+          border: none;
+          width: initial;
+          height: initial;
+          background-color: initial;
+        }
+        #footer {
+          position: fixed;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: var(--footer-height);
+          background-color: var(--menu-bar-color);
+          bottom: 0;
+          left: 0;
+          align-items: center;
+        }
+        #footer > a {
+          background-color: transparent;
+          padding-left: 0;
+          border: 0;
+          transition: 0.3s;
+        }
+        #footer > a:hover {
+          color: red;
+          background-color: transparent;
+        }
+        #footer > #impressum {
+          position: absolute;
+          right: 0.5vw;
+          font-size: 0.5em;
+          color: rgb(150, 150, 150);
+        }
+        #footer > #impressum:hover {
+          color: black;
+        }
+        #footer > #newsletter-mobile {
+          display: none;
+        }
+        #footer > #newsletter-desktop {
+          display: inherit;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <span
+    id="menu-btn"
+    onclick="showMenu()"
+    style="cursor: pointer;"
+    class="material-icons"
+  >
+    menu
+  </span>
+  <div class="horizontal-center">
+    <div id="menu">
+      <a href="./index.html" id="home-btn" class="material-icons">
+        home
+      </a>
+      <a href="./page1.html" id="page-btn1">
+        page1
+      </a>
+      <a href="./page2.html" id="page-btn2">
+        page2
+      </a>
+      <a href="./page3.html" id="page-btn3">
+        page3
+      </a>
+      <div id="footer">
+        <a href="./newsletter.html" id="newsletter-mobile">
+          Newsletter
+        </a>
+        <a href="./newsletter.html" id="newsletter-desktop">
+          Click here now to sign up for our fabulous newsletter!
+        </a>
+        <a id="impressum" href="./impressum.html">Impressum</a>
+      </div>
+    </div>
+  </div>
+</html>

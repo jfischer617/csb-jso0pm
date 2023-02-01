@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./templates/baseline.js"></script>
+    <title>impressum</title>
+    <style>
+      #logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      #back-btn {
+        display: none;
+      }
+      @media (min-width: 720px) and (min-height: 720px) {
+        #back-btn {
+          display: initial;
+          color: black;
+          text-decoration: none;
+          transition: 0.3s;
+        }
+        #back-btn:hover {
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <general-style></general-style>
+    <logo-loader></logo-loader>
+    <div class="horizontal-center">
+      <div class="contains-text">
+        <a class="material-icons" id="back-btn" href="./index.html">
+          arrow_back
+        </a>
+        <h2>
+          Impressum
+        </h2>
+        <h3>
+          Angaben gem. § 5 TMG:
+        </h3>
+        <p>  
+          Vorname, Name:
+        </p>
+        <p>
+          Adresse:
+        </p>
+        <p>
+          PLZ:
+        </p>
+        <p>
+          Kontaktaufnahme:
+        </p>
+        <p>
+          Telefon:
+        </p>
+        <p>
+          Fax:
+        </p>
+        <p>
+          E-Mail:
+        </p>
+        <p>
+          Umsatzsteuer-ID:
+        </p>
+      </div>
+    </div>
+</html>
